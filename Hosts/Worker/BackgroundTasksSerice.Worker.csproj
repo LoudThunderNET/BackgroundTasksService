@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-TaskWorker-5def9fee-8bd1-454d-85f6-06fb4a1dc980</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.2.2" />
+    <PackageReference Include="MassTransit.EntityFrameworkCore" Version="8.2.2" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.3.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\BackgroundTasksService.AppServices.csproj" />
+    <ProjectReference Include="..\..\Contracts\BackgroundTasksService.Contracts.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\DataAccess\BackgroundTasksService.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure\BackgroundTaskService.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

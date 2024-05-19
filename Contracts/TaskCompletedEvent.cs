@@ -1,4 +1,4 @@
-namespace Contracts
+namespace BackgroundTasksService.Contracts
 {
     using System;
 
@@ -6,5 +6,6 @@ namespace Contracts
     {
         public Guid CorrelationId { get; init; }
         public string TaskType { get; init; }
+        public string Payload { get; init; }
     }
 }

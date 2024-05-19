@@ -1,16 +1,17 @@
-namespace Company.StateMachines
+namespace BackgroundTasksService.AppServices.StateMachines
 {
     using MassTransit;
 
-    public class MassTransitStateMachineExperimentsStateSagaDefinition :
-        SagaDefinition<BackGroundJobState>
+    public class TaskSagaDefinition :
+        SagaDefinition<TaskSaga>
     {
         protected override void ConfigureSaga(IReceiveEndpointConfigurator endpointConfigurator, 
-            ISagaConfigurator<BackGroundJobState> sagaConfigurator,
+            ISagaConfigurator<TaskSaga> sagaConfigurator,
             IRegistrationContext context)
         {
             endpointConfigurator.UseMessageRetry(r => r.Intervals(500, 1000));
             endpointConfigurator.UseInMemoryOutbox(context);
+            EndpointName = typeof(TaskSagaStateMachine).Name;
         }
     }
 }
