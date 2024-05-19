@@ -7,3 +7,17 @@
 /Contracts/obj
 /Hosts/obj
 /obj
+/Application/bin/Debug/net8.0
+/BackgroundTasksService.DataAccess/obj
+/Contracts/bin/Debug/net8.0
+/Domain/BackgroundTasksService.Domain/obj
+/Hosts/Migrator/bin/Debug/net8.0
+/Hosts/Migrator/obj
+/Hosts/TaskInitiator/bin/Debug/net8.0
+/Hosts/TaskInitiator/obj
+/Hosts/Worker/bin/Debug/net8.0
+/Hosts/Worker/obj
+/Infrastructure/DataAccess/bin/Debug/net8.0
+/Infrastructure/DataAccess/obj
+/Infrastructure/Infrastructure/bin/Debug/net8.0
+/Infrastructure/Infrastructure/obj
